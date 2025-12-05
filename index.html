@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Ada Zhang | Portfolio</title>
+
+    <!-- Inria Serif 字体 -->
+    <link href="https://fonts.googleapis.com/css2?family=Inria+Serif:wght@400;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <!-- 导航 -->
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="assignment/a1.html">Assignments</a>
+        <a href="about.html">About</a>
+    </nav>
+
+    <!-- 左侧悬浮插画 -->
+    <div class="floating-illo">
+        <img src="images/guide.png" alt="icon">
+    </div>
+
+    <main>
+
+        <!-- Hero Block：名字 & 身份 -->
+        <section class="hero-block">
+            <h1>Ada Zhang</h1>
+            <p class="subtitle">Illustrator · Interaction Student</p>
+        </section>
+
+     <section class="card">
+    <h2>Assignments</h2>
+
+    <!-- Assignment 1 -->
+    <p><strong>Assignment 1</strong> — Lost and Found</p>
+    <p><a href="assignment/a1.html">View project</a></p>
+
+    <!-- Assignment 2 -->
+    <p><strong>Assignment 2</strong> — Face Generator </p>
+    <p><a href="assignment/a2.html">View project</a></p>
+
+    <!-- Assignment 3 -->
+    <p><strong>Assignment 3</strong> — Experimental Clock</p>
+    <p><a href="assignment/a3.html">View project</a></p>
+
+    <!-- Assignment 4 -->
+    <p><strong>Assignment 4</strong> — Exquisite Corpse</p>
+    <p><a href="assignment/a4.html">View project</a></p>
+
+    <!-- Assignment 5 -->
+    <p><strong>Assignment 5</strong> — Optical Illusion</p>
+    <p><a href="assignment/a5.html">View project</a></p>
+
+    <!-- Assignment 6 -->
+    <p><strong>Assignment 6</strong> — Data Portrait</p>
+    <p><a href="assignment/a6.html">View project</a></p>
+
+    <!-- Assignment 7 -->
+    <p><strong>Assignment 7</strong> — Autobiographical Game</p>
+    <p><a href="assignment/a7.html">View project</a></p>
+</section>
+
+        <!-- About -->
+        <section class="card">
+            <h2>About me</h2>
+            <p>
+                Learn more about my background, interests, and creative direction.
+            </p>
+            <p><a href="about.html">Go to About page</a></p>
+        </section>
+
+    </main>
+
+<script>
+  const illo = document.querySelector('.floating-illo');
+
+  window.addEventListener('scroll', () => {
+    if (!illo) return;
+
+    const offset = window.scrollY;
+
+    // 左右几乎不动
+    const moveX = Math.sin(offset * 0.004) * 3;
+
+    // 上下主角：幅度更大、更明显
+    const moveY = Math.sin(offset * 0.006) * 22;
+
+    const baseX = 0;     // 左右基础偏移
+    const baseY = -50;   // 垂直基础偏移，保持大概在现在这个高度
+
+    illo.style.transform = `translate(${baseX + moveX}px, ${baseY + moveY}%)`;
+  });
+</script>
+
+</body>
+</html>
