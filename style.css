@@ -4,24 +4,24 @@
    #edce7a  warm yellow
    #c98c9a  muted pink
    #e5c6c3  soft pink
-   #fcf9e8  milk white background
+   #fcf9e8  background
 */
 
 body{
     font-family: Arial, sans-serif;
-    background-color: #fcf9e8;        /* 奶白背景 */
+    background-color: #fcf9e8;       
     color: #333333;
     padding: 20px;
     overflow-x: hidden;
 }
 
-/* 主内容宽度 */
+
 main{
     max-width: 960px;
     margin: 0 auto;
 }
 
-/* 首页主标题样式（hero） */
+
 h1{
     color: #4fb19d;
     text-align: center;
@@ -32,11 +32,11 @@ h1{
     margin-bottom: 25px;
 
     display: inline-block;
-    border-bottom: 2px solid rgba(255,255,255,0.5); /* 半透明白线 */
+    border-bottom: 2px solid rgba(255,255,255,0.5); 
     padding-bottom: 8px;
 }
 
-/* 子标题身份行 */
+
 .subtitle{
     font-size: 1.1rem;
     color: #c98c9a;
@@ -46,7 +46,7 @@ h1{
     margin-bottom: 40px;
 }
 
-/* 小标题 */
+
 h2{
     color: #c98c9a;
     border-bottom: 2px solid #9ac5e5;
@@ -55,7 +55,7 @@ h2{
     margin-bottom: 16px;
 }
 
-/* 文字与清单 */
+
 p{
     font-size: 15px;
     line-height: 1.7;
@@ -67,7 +67,7 @@ ul{
     margin-bottom: 16px;
 }
 
-/* 导航 */
+
 nav{
     text-align: center;
     margin-bottom: 24px;
@@ -86,7 +86,7 @@ nav a:hover{
     text-decoration: underline;
 }
 
-/* 卡片区块 */
+
 .card{
     background-color: rgba(255,255,255,0.7);
     border-radius: 12px;
@@ -99,14 +99,14 @@ nav a:hover{
     width: 100%;
 }
 
-/* p5 嵌入框 */
+
 iframe{
     display: block;
     margin: 20px auto;
     border-radius: 10px;
 }
 
-/* 提醒信息 */
+
 #important-message{
     background-color: rgba(252,249,232,0.6);
     padding: 8px;
@@ -134,12 +134,11 @@ button:hover{
     text-align: center;
 }
 
-/* ————————————————
-   左侧悬浮插画（可晃动）
-   ———————————————— */
+
 .floating-illo{
     position: fixed;
-    left: 180px;         /* 往右一点可以贴近白色卡片 */
+    left: 100
+px;         /* 往右一点可以贴近白色卡片 */
     top: 65%;            /* 调整垂直位置 */
     transform: translateY(-50%);
     width: 300px;        /* 你喜欢的尺寸 */
