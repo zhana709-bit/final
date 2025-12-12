@@ -15,13 +15,13 @@ body{
     overflow-x: hidden;
 }
 
-/* 主内容宽度 */
+
 main{
     max-width: 960px;
     margin: 0 auto;
 }
 
-/* 首页主标题样式 */
+/* title */
 h1{
     color: #4fb19d;
     text-align: center;
@@ -36,7 +36,7 @@ h1{
     padding-bottom: 8px;
 }
 
-/* 子标题身份行 */
+/* subtitle */
 .subtitle{
     font-size: 1.1rem;
     color: #c98c9a;
@@ -46,7 +46,7 @@ h1{
     margin-bottom: 40px;
 }
 
-/* 小标题 */
+
 h2{
     color: #c98c9a;
     border-bottom: 2px solid #9ac5e5;
@@ -55,7 +55,7 @@ h2{
     margin-bottom: 16px;
 }
 
-/* 正文文字 */
+
 p{
     font-size: 15px;
     line-height: 1.7;
@@ -67,7 +67,7 @@ ul{
     margin-bottom: 16px;
 }
 
-/* 导航 */
+
 nav{
     text-align: center;
     margin-bottom: 24px;
@@ -86,7 +86,7 @@ nav a:hover{
     text-decoration: underline;
 }
 
-/* 卡片区块 */
+
 .card{
     background-color: rgba(255,255,255,0.7);
     border-radius: 12px;
@@ -99,14 +99,8 @@ nav a:hover{
     width: 100%;
 }
 
-/* p5 iframe 备用 */
-iframe{
-    display: block;
-    margin: 20px auto;
-    border-radius: 10px;
-}
 
-/* 提醒信息 */
+
 #important-message{
     background-color: rgba(252,249,232,0.6);
     padding: 8px;
@@ -114,7 +108,7 @@ iframe{
     backdrop-filter: blur(3px);
 }
 
-/* 按钮 */
+
 button{
     background-color: #4fb19d;
     color: #ffffff;
@@ -129,15 +123,15 @@ button:hover{
     background-color: #9ac5e5;
 }
 
-/* 首页名字那块容器 */
+
 .hero-block{
     text-align: center;
 }
 
-/* 左侧悬浮插画 */
+/* icon */
 .floating-illo{
     position: fixed;
-    left: 100px;          /* 你可以改成 120 140 看效果 */
+    left: 100px;          
     top: 65%;
     transform: translateY(-50%);
     width: 300px;
@@ -150,11 +144,11 @@ button:hover{
 .floating-illo img{
     width: 100%;
     height: 100%;
-    object-fit: contain;   /* 让插画完整显示 不被裁剪 */
+    object-fit: contain;   
     display: block;
 }
 
-/* Assignment 页面里 p5 卡片 让画布在白框中居中 */
+/* Assignment  p5  */
 .sketch-card .sketch-container{
     margin-top: 16px;
     display: flex;
@@ -162,30 +156,77 @@ button:hover{
     align-items: center;
 }
 
-/* p5 生成的 canvas 样式 */
+
 .sketch-card .sketch-container canvas{
     display: block;
     border-radius: 12px;
     box-shadow: 0 8px 18px rgba(0,0,0,0.06);
 }
 
-/* 小屏幕隐藏插画 */
+
 @media (max-width: 900px){
     .floating-illo{
         display: none;
     }
 }
-/* Assignment 页面里的 p5 卡片：让画布在白框里居中 */
-.sketch-card .sketch-container{
-    margin-top: 16px;
-    display: flex;
-    justify-content: center;   /* 水平居中 */
-    align-items: center;       /* 垂直居中（如果以后高度更大也有用） */
+/* center again*/
+.sketch-card {
+  text-align: center;
 }
 
-/* p5 生成的 canvas 样式 */
-.sketch-card .sketch-container canvas{
-    display: block;
-    border-radius: 12px;       /* 让画面边角更柔和 */
-    box-shadow: 0 8px 18px rgba(0,0,0,0.06);  /* 可选的小阴影 */
+.sketch-container {
+  display: inline-block;
+  margin-top: 12px;
+}
+
+
+.sketch-container canvas {
+  display: block;
+  margin: 0 auto;
+  border-radius: 12px;
+}
+
+/* Eevee Gallery */
+.eeveeGrid{
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 16px;
+}
+
+@media (max-width: 1000px){
+  .eeveeGrid{
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 640px){
+  .eeveeGrid{
+    grid-template-columns: 1fr;
+  }
+}
+
+.eeveeItem{
+  margin: 0;
+}
+
+.eeveeFrame{
+  width: 100%;
+  aspect-ratio: 4 / 3; 
+  overflow: hidden;
+  border-radius: 12px;
+  background: rgba(255,255,255,0.55);
+}
+
+.eeveeFrame img{
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;  
+  object-position: center;
+}
+
+.eeveeItem figcaption{
+  margin-top: 8px;
+  font-size: 14px;
+  line-height: 1.5;
 }

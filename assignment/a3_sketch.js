@@ -18,12 +18,16 @@ const friction = 0.90
 const springK  = 0.01  
 
 function setup() {
-  createCanvas(400, 400)
-  angleMode(RADIANS)
-  ellipseMode(CENTER)
-  posX = width/2
-  posY = height/2
+  let canvas = createCanvas(400, 400);
+  canvas.parent("sketch-container"); 
+
+  angleMode(RADIANS);
+  ellipseMode(CENTER);
+
+  posX = width / 2;
+  posY = height / 2;
 }
+
 
 function draw() {
   //time

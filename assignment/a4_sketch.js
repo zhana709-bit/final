@@ -2,8 +2,10 @@
 let tailWiggle = false
 
 function setup() {
-  createCanvas(400, 600)
-  noLoop()
+  let canvas = createCanvas(400, 600);
+  canvas.parent("sketch-container");  // 让画布进卡片
+
+  noLoop();
 }
 
 function draw() {

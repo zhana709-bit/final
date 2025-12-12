@@ -1,6 +1,8 @@
 function setup() {
-  createCanvas(400, 400);
-  noSmooth()
+
+  let canvas = createCanvas(400, 400);
+  canvas.parent("sketch-container");
+  noSmooth();
 }
 
 function draw() {

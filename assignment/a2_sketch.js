@@ -31,10 +31,12 @@ function newEyes(seed) {
 }
 
 function setup() {
-  createCanvas(400, 400)
-  angleMode(RADIANS)
-  ellipseMode(CENTER)
-  newEyes()
+  let canvas = createCanvas(400, 400);
+  canvas.parent("sketch-container");
+
+  angleMode(RADIANS);
+  ellipseMode(CENTER);
+  newEyes();
 }
 
 function draw() {

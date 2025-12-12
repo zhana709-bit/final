@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>About | Ada Zhang</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inria+Serif:wght@400;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="eevee.html">Eevee</a>
+    <a href="about.html">About</a>
+  </nav>
+
+  <div class="floating-illo">
+    <img src="images/guide.png" alt="icon">
+  </div>
+
+  <main>
+    <section class="heroBlock">
+      <h1>Ada Zhang</h1>
+      <p class="subtitle">Illustrator · Interaction Student</p>
+    </section>
+
+    <section class="card">
+      <h2>About Me</h2>
+
+      <div class="aboutLayout">
+        <img class="aboutImg" src="images/about.jpg" alt="About image">
+
+        <div class="aboutText">
+          <p>
+            Hi, I’m Ada Zhang. I work with illustration and interaction, and I am currently an interaction student with an illustration background.
+          </p>
+
+          <p>
+            My work often starts from small, ordinary moments in daily life. I am interested in turning tiny experiences, routines, and emotions into visual or interactive forms. Through drawing, small games, and interaction experiments, I try to look closer at these moments and think about how design can respond to them.
+          </p>
+
+          <p>
+            This website collects my course projects and experiments from this semester. It reflects my learning process, including trying, adjusting, and continuing to explore.
+          </p>
+
+          <p class="aboutLinks">
+            <a href="index.html">Back to Home</a>
+          </p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2025 Ada Zhang</p>
+  </footer>
+
+  <script>
+    const hero = document.querySelector(".heroBlock")
+    const layout = document.querySelector(".aboutLayout")
+    const img = document.querySelector(".aboutImg")
+    const links = document.querySelector(".aboutLinks")
+
+    function applyBaseStyles() {
+      if (hero) {
+        hero.style.textAlign = "center"
+      }
+
+      if (layout) {
+        layout.style.display = "flex"
+        layout.style.gap = "28px"
+        layout.style.alignItems = "flexStart"
+        layout.style.marginTop = "10px"
+      }
+
+      if (img) {
+        img.style.width = "360px"
+        img.style.maxWidth = "100%"
+        img.style.height = "auto"
+        img.style.borderRadius = "12px"
+        img.style.display = "block"
+      }
+
+      if (links) {
+        links.style.marginTop = "14px"
+      }
+    }
+
+    function applyResponsive() {
+      if (!layout || !img) return
+
+      if (window.innerWidth <= 900) {
+        layout.style.flexDirection = "column"
+        img.style.width = "100%"
+      } else {
+        layout.style.flexDirection = "row"
+        img.style.width = "360px"
+      }
+    }
+
+    applyBaseStyles()
+    applyResponsive()
+    window.addEventListener("resize", applyResponsive)
+  </script>
+</body>
+</html>
