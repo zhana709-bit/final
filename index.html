@@ -12,10 +12,10 @@
 
 <body>
 
-    <!-- 导航 -->
-    <nav>
+
+    <nav> 
         <a href="index.html">Home</a>
-        <a href="assignment/a1.html">Assignments</a>
+
         <a href="about.html">About</a>
     </nav>
 
@@ -83,14 +83,14 @@
 
     const offset = window.scrollY;
 
-    // 左右几乎不动
-    const moveX = Math.sin(offset * 0.004) * 3;
+    // left right
+    const moveX = Math.sin(offset * 0.004) * 6;
 
-    // 上下主角：幅度更大、更明显
-    const moveY = Math.sin(offset * 0.006) * 22;
+    // up down
+    const moveY = Math.sin(offset * 0.006) * 20;
 
-    const baseX = 0;     // 左右基础偏移
-    const baseY = -50;   // 垂直基础偏移，保持大概在现在这个高度
+    const baseX = 0;     
+    const baseY = -50;  
 
     illo.style.transform = `translate(${baseX + moveX}px, ${baseY + moveY}%)`;
   });
